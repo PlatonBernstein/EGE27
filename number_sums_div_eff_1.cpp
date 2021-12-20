@@ -27,5 +27,11 @@ int main()
             maxchet = max(maxchet, t);
         }
     }
+    int checksum = -1;
+    if (maxchet >= -maxabs and maxnechet >= -maxabs) {
+        // были найдены и максимальное чётное, и максимальное нечётное
+        checksum = maxchet + maxnechet;
+    }
+    cout << checksum;
     return 0;
 }
