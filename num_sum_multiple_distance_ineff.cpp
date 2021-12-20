@@ -17,4 +17,13 @@ int main()
     for (i = 0; i < n; i++) {
         std::cin >> x[i];
     }
+    for (i = 0; i < n; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (abs(i - j) % 4 == 0 && (x[i] + x[j]) % 39 == 0) {
+                count += 1;
+            }
+        }
+    }
+    std::cout << count;
+    return 0;
 }
