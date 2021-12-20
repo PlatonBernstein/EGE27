@@ -18,5 +18,22 @@ int main()
     for (i = 0; i < n; i++) {
         std::cin >> x[i];
     }
+    // Вычисляем
+    for (i = 0; i < n; i ++) {
+        for (j = i + 1; j < n; j ++) {
+            s = x[i] + x[j];
+            if (s % 2 != 0) {
+                if (checksum_found) {
+                    checksum = max(checksum, s);
+                }
+                else {
+                    checksum = s;
+                    checksum_found = true;
+                }
+            }
+        }
+    }
+    // Выводим
+    cout << checksum;
     return 0;
 }
