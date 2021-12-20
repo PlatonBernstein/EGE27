@@ -10,5 +10,15 @@
 
 int main()
 {
+    long long n, count;
+    long long i;
+    // Ввод размера массива
+    std::cin >> n;
+    count = 0;
+    long long* x = new long long[n];
+    // Ввод всех х
+    for (i = 0; i < n; i++) {
+        std::cin >> x[i];
+    }
     return 0;
 }
