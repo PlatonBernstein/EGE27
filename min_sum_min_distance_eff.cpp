@@ -16,5 +16,10 @@ int main()
     cin >> n;
     minsum = 80000;
     minnum = 40000;
+    long long* x = new long long[4];
+    // Ввод четырех x
+    for (i = 0; i < 4; i++) {
+        cin >> x[i];
+    }
     return 0;
 }
