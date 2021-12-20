@@ -11,5 +11,13 @@ const int maxabs = 1000;
 
 int main()
 {
+    int i, t, n;
+    int maxchet = -maxabs - 1, maxnechet = -maxabs - 1;
+    // Ввод количества чисел
+    cin >> n;
+    // Ввод очередного x
+    for (i = 0; i < n; i++) {
+        cin >> t;
+    }
     return 0;
 }
