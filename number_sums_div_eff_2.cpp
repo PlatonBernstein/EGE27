@@ -61,5 +61,14 @@ int main()
     }
     count_total = count_g_g + count_g_le + count_le_g;
     count_total /= 2;
+    // не забываем счётчик чисел, которые сами по себе делятся нацело на 40
+    int qg = entered_quantity_g[0];
+    int qle = entered_quantity_le[0];
+    if (qg > 0) {
+        count_total += (qg * (qg - 1)) / 2;
+        count_total += (qg * qle);
+    }
+    // Готово
+    cout << count_total;
     return 0;
 }
