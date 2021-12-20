@@ -20,5 +20,18 @@ int main()
     for (i = 0; i < 6; i++) {
         cin >> x[i];
     }
+    for (i = 6; i < n; i++) {
+        for (j = 1; j < 6; j++) {
+            if ((x[0] + x[j]) % 31 == 0) {
+                count += 1;
+            }
+        }
+        x[0] = x[1];
+        x[1] = x[2];
+        x[2] = x[3];
+        x[3] = x[4];
+        x[4] = x[5];
+        cin >> x[5];
+    }
     return 0;
 }
