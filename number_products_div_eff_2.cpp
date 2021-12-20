@@ -28,6 +28,26 @@ int count_2_1(int* x, int n, int div1, int div2, int div3)
     return cnt12 * cnt3;
 }
 
+int count_2_2(int* x, int n, int div1, int div2, int div3)
+{
+    // сколько чисел делится на div1 и div2, но не делятся на div3?
+    // сколько чисел делится на div2 и div3, но не делятся на div1?
+    // перемножаем!
+    int cnt12 = 0;
+    int cnt23 = 0;
+    for (int i = 0; i < n; i++) {
+        // сколько чисел делится на первый и второй множитель, но не делится на третий?
+        if (x[i] % div1 == 0 and x[i] % div2 == 0 and x[i] % div3 != 0) {
+            cnt12++;
+        }
+        // сколько чисел делится на второй и третий множитель, но не делится на первый?
+        if (x[i] % div1 != 0 and x[i] % div2 == 0 and x[i] % div3 == 0) {
+            cnt23++;
+        }
+    }
+    return cnt12 * cnt23;
+}
+
 int main()
 {
     int n, count;
@@ -55,6 +75,5 @@ int main()
     count += count_2_1(x, n, 3, 7, 5);
     // 4. Сколько пар чисел 3*5 и 7 ?
     count += count_2_1(x, n, 3, 5, 7);
-    // Сколько пар чисел 3*5 и 5*7 ?
     return 0;
 }
