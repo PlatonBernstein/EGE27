@@ -30,4 +30,15 @@ int main()
         t = t % divider;
         entered_quantity[i % dist][t]++;  // накрутили счётчик остатков от деления
     }
+    // Теперь посчитаем общее количество таких пар
+    for (int d = 0; d < dist; d++) {
+        for (i = 0; i < divider; i++) {
+            j = divider - i;
+            if (j < divider and i != j) {
+                count_total += entered_quantity[d][i] * entered_quantity[d][j];
+            }
+        }
+    }
+    count_total /= 2;
+    return 0;
 }
