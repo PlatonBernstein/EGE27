@@ -18,6 +18,14 @@ int main()
     // Ввод очередного x
     for (i = 0; i < n; i++) {
         cin >> t;
+        if (t % 2 != 0) {
+            // если оно нечётное - ищем максимальное
+            maxnechet = max(maxnechet, t);
+        }
+        else {
+            // если оно чётное - ищем максимальное
+            maxchet = max(maxchet, t);
+        }
     }
     return 0;
 }
