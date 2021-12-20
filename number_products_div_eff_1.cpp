@@ -20,5 +20,12 @@ int main()
     for (i = 0; i < n; i++) {
         std::cin >> x[i];
     }
+    // 1. Сколько чисел уже делится на 14?
+    long long div14 = 0;
+    for (i = 0; i < n; i++) {
+        if (x[i] % 14 == 0) {
+            div14++;
+        }
+    }
     return 0;
 }
