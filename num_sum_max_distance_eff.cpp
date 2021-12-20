@@ -16,5 +16,9 @@ int main()
     // Ввод размера массива
     cin >> n;
     long long* x = new long long[6];
+    // Ввод шести x
+    for (i = 0; i < 6; i++) {
+        cin >> x[i];
+    }
     return 0;
 }
