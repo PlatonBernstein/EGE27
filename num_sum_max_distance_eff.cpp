@@ -10,5 +10,11 @@ using namespace std;
 
 int main()
 {
+    long long n, count;
+    long long i, j;
+    count = 0;
+    // Ввод размера массива
+    cin >> n;
+    long long* x = new long long[6];
     return 0;
 }
