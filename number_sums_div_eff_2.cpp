@@ -49,10 +49,17 @@ int main()
                 // Если остатки от чисел больше 40 разные
                 plus_g_g = entered_quantity_g[i] * entered_quantity_g[j];
             }
+            else if (entered_quantity_g[i] > 1) {
+                // Если остатки от чисел больше 40 одинаковые - надо учесть возможность того, что число "сложилось" само с собой
+                // например - два числа, 60 и 60, имеют сумму 120, делящуюся на 40
+                plus_g_g = entered_quantity_g[i] * (entered_quantity_g[i] - 1);
+            }
             count_g_g += plus_g_g;
+            count_g_le += entered_quantity_g[i] * entered_quantity_le[j];
+            count_le_g += entered_quantity_le[i] * entered_quantity_g[j];
         }
     }
-    count_total = count_g_g;
+    count_total = count_g_g + count_g_le + count_le_g;
     count_total /= 2;
     return 0;
 }
