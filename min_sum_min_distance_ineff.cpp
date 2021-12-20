@@ -9,5 +9,11 @@ using namespace std;
 
 int main()
 {
+    long long n, minsum;
+    long long i, j;
+    // Ввод размера массива
+    cin >> n;
+    minsum = 1000;
+    long long* x = new long long[n];
     return 0;
 }
