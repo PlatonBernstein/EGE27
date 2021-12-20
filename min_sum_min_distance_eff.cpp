@@ -23,10 +23,17 @@ int main()
     }
     // Производим вычисления
     for (i = 4; i < n; i++) {
+        if (x[0] < minnum) {
+            minnum = x[0];
+        }
         x[0] = x[1];
         x[1] = x[2];
         x[2] = x[3];
         cin >> x[3];
+        if (x[3] + minnum < minsum) {
+            minsum = x[3] + minnum;
+        }
     }
+    cout << minsum;
     return 0;
 }
