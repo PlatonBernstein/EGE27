@@ -40,5 +40,14 @@ int main()
         }
     }
     count_total /= 2;
+    // Считаем число пар с одинаковым остатком деления
+    for (int d = 0; d < dist; d++) {
+        long long t = entered_quantity[d][0];
+        if (t > 0) {
+            count_total += (t * (t - 1)) / 2;
+        }
+    }
+    // Выводим результат
+    cout << count_total;
     return 0;
 }
