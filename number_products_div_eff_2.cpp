@@ -9,6 +9,24 @@
 6. How many numbers divide by 3*5 and 5*7; by 3*7 and 7*5; by 3*5 and 5*7
 */
 
+int count_2_1(int* x, int n, int div1, int div2, int div3)
+{
+    // сколько чисел делится на div1_1 и div1_2 но не делятся на div2_1
+    // перемножить на сколько чисел делится на div2_1, но не делится на div1_1 и div1_2
+    int cnt12 = 0;
+    int cnt3 = 0;
+    for (int i = 0; i < n; i++) {
+        // сколько чисел делится на первый и второй множитель, но не делится на третий?
+        if (x[i] % div1 == 0 and x[i] % div2 == 0 and x[i] % div3 != 0) {
+            cnt12++;
+        }
+        // сколько чисел делится на третий множитель, но не делится на первый или второй?
+        if ((x[i] % div1 != 0 and x[i] % div2 != 0) and x[i] % div3 == 0) {
+            cnt3++;
+        }
+    }
+    return cnt12 * cnt3;
+}
 
 int main()
 {
