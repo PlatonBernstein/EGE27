@@ -23,5 +23,16 @@ int main()
         }
         n++;
     }
+    // Вычисляем
+    for (i = 0; i < n; i ++) {
+        for (j = i + 1; j < n; j ++) {
+            s = x[i] + x[j];
+            if (s % divider == 0 && (x[i] > maxx || x[j] > maxx)) {
+                checksum ++;
+            }
+        }
+    }
+    // Выводим
+    cout << checksum;
     return 0;
 }
