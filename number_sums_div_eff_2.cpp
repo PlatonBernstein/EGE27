@@ -40,5 +40,19 @@ int main()
             entered_quantity_le[t] ++;
         }
     }
+    // Теперь посчитаем общее количество таких пар
+    for (i = 0; i < divider; i++) {
+        j = divider - i;
+        if (j < divider) {
+            int plus_g_g = 0;
+            if (i != j) {
+                // Если остатки от чисел больше 40 разные
+                plus_g_g = entered_quantity_g[i] * entered_quantity_g[j];
+            }
+            count_g_g += plus_g_g;
+        }
+    }
+    count_total = count_g_g;
+    count_total /= 2;
     return 0;
 }
