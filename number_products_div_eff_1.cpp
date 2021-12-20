@@ -41,5 +41,8 @@ int main()
             div7++;
         }
     }
+    count += div2 * div7 + div14 * div2 + div14 * div7 + div14 * (n - div14 - div2 - div7) + div14 * (div14 - 1) / 2;
+    // Готово!
+    std::cout << count;
     return 0;
 }
