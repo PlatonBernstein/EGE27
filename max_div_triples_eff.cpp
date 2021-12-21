@@ -9,5 +9,11 @@ using namespace std;
 
 int main()
 {
+	long long n, i, i1, i2, maxtriple;
+	maxtriple = 0;
+    // Ввод размера массива
+    cin >> n;
+	long long maxnum [4][3];
+	long long ans [3];
     return 0;
 }
