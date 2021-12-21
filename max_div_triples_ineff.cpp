@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+using namespace std;
 
 /*
 1. Ввод чисел
@@ -13,11 +14,14 @@ int main()
 {
 	long long n, i;
     // Ввод размера массива
-    std::cin >> n;
+    cin >> n;
     long long* x = new long long[n];
     // Ввод всех х
     for (i = 0; i < n; i++) {
-        std::cin >> x[i];
+        cin >> x[i];
+    }
+	for (i = 0; i < n; i++) {
+        cout << x[i] << endl;
     }
     return 0;
 }
