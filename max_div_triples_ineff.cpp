@@ -12,7 +12,8 @@ using namespace std;
 
 int main()
 {
-	long long n, i, j, e;
+	long long n, i, j, e, maxtriple;
+	maxtriple = 0;
     // Ввод размера массива
     cin >> n;
     long long* x = new long long[n];
@@ -23,11 +24,12 @@ int main()
 	for (i = 0; i < n; i++) {
 		for (j = i + 1; j < n; j++) {
 			for (e = j + 1; e < n; e++) {
-                if ((x[i] + x[j] + x[e]) % 4 == 0) {
-                    cout << x[i] + x[j] + x[e] << endl;
+                if ((x[i] + x[j] + x[e]) % 4 == 0 and (x[i] + x[j] + x[e]) > maxtriple) {
+                    maxtriple = x[i] + x[j] + x[e];
                 }
 			}
 		}
     }
+    cout << maxtriple;
     return 0;
 }
