@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-	long long n, i;
+	long long n, i, j;
     // Ввод размера массива
     cin >> n;
     long long* x = new long long[n];
@@ -21,7 +21,9 @@ int main()
         cin >> x[i];
     }
 	for (i = 0; i < n; i++) {
-        cout << x[i] << endl;
+		for (j = i + 1; j < n; j++) {
+			cout << x[i] + x[j] << endl;
+		}
     }
     return 0;
 }
